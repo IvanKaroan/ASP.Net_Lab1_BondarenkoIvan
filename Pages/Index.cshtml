@@ -1,0 +1,86 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Data list";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Меню Ресторана ИГТУ</h1>
+
+    <form method="post">
+        <table class="table table-hover">
+            <thead>
+            <th>Название блюда</th>
+            <th>День недели</th>
+            <th>Время подачи блюда</th>
+            <th>Тип блюда</th>
+            <th>Цена</th>
+            <th></th>
+
+            @foreach (var item in Model._repositary.List())
+            {
+                <tr>
+                    <td>@item.NameDish</td>
+                    <td>@item.DayOfWeek</td>
+                    <td>@item.ServingTime</td>
+                    <td>@item.TipeDish</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <a class="btn btn-outline-primary" asp-page="Update" asp-route-id="@item.Id">Изменить</a>   
+                        <input class="btn btn-danger" type="submit" value="X" asp-page-handler="remove"
+                               asp-route-id="@item.Id">
+                    </td>
+                </tr>
+            }
+        </table>
+    </form>
+    <h2>Добавить новое блюдо</h2>
+    <form method="post" asp-page-handler="create">
+        <table style="margin:auto">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="NameDish"><b>Название Блюда</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="NameDish" id="NameDish" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="DayOfWeek"><b>День Недели</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="DayOfWeek" id="DayOfWeek" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ServingTime"><b>Время Подачи</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="ServingTime" id="ServingTime" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="TipeDish"><b>Тип блюда</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="TipeDish" id="TipeDish">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable for="Price"><b>Цена</b></lable>
+                    </td>
+                    <td>
+                        <input type="number" name="Price" id="Price">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" value="Добавить">
+    </form>
+
+</div>

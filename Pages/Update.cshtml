@@ -1,0 +1,55 @@
+﻿@page
+@model Lab2.Pages.UpdateModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Изменить данные блюда</h1>
+    <form method="post">
+        <table style="margin:auto">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="NameDish"><b>Название</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="NameDish" id="NameDish" required value=@Model.UpdatedDish.NameDish>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="DayOfWeek"><b>День недели</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="DayOfWeek" id="DayOfWeek" value=@Model.UpdatedDish.DayOfWeek>
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td>
+                        <label for="ServingTime"><b>Время подачи</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="ServingTime" id="ServingTime" value=@Model.UpdatedDish.ServingTime>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="TipeDish"><b>Тип блюда</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="TipeDish" id="TipeDish" value=@Model.UpdatedDish.TipeDish>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable for="Price"><b>Цена</b></lable>
+                    </td>
+                    <td>
+                        <input type="number" name="Price" id="Price" value=@Model.UpdatedDish.Price>
+                    </td>
+            </tbody>
+        </table>
+        <input type="submit" value="Сохранить">
+    </form>
+</div>

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "902d813d-c380-4d35-978c-cf0f5de5d289",
+    "NameDish": "тамто",
+    "DayOfWeek": "понедельник",
+    "ServingTime": "обед",
+    "TipeDish": "шинпен",
+    "Price": 20
+  },
+  {
+    "Id": "cb9a4d7a-0c63-490c-b30b-60f3e5fd5368",
+    "NameDish": "Борщ",
+    "DayOfWeek": "Воскресенье",
+    "ServingTime": "Ужин",
+    "TipeDish": "Суп",
+    "Price": 45
+  },
+  {
+    "Id": "b1169599-1fff-4402-b999-8acd09254024",
+    "NameDish": "Медовик",
+    "DayOfWeek": "Четверг",
+    "ServingTime": "Обед",
+    "TipeDish": "Десерт",
+    "Price": 50
+  },
+  {
+    "Id": "ca224c0a-adc9-40f0-9a1e-59278b7ff888",
+    "NameDish": "Цезарь",
+    "DayOfWeek": "Вторник",
+    "ServingTime": "Обед",
+    "TipeDish": "Салат",
+    "Price": 150
+  }
+]
